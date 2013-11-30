@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create New Post</title>
+		<style>
+			html, body, h1, h3, form, ol, li {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background: #ffffff;
+				color: #111111;
+				font-family: Georgia, "Times New Roman", Times, serif;
+				padding: 20px;
+			}
+
+			form#new-post-form {
+				background: #9cbc2c;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius:5px;
+				padding: 20px;
+				width: 700px;
+			}
+
+			form#new-post-form ol li {
+				background: #b9cf6a;
+				background: rgba(255,255,255, .3);
+				border-color: #e3ebc3;
+				border-color: rgba(255,255,255, .6);
+				border-style: solid;
+				border-width: 2px;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				line-height: none;
+				padding: 5px 10px;
+				margin-bottom: 2px;
+			}
+
+			form#new-post-form label{
+				float: left;
+				font-size: 14px;
+				width: 110px;
+			}
+
+			form#new-post-form input, textarea {
+				background: #fffff;
+				border: none;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				-khtml-border-radius: 3px;
+				border-radius: 3px;
+				font: italic 14px Georgia;
+				outline: none;
+				padding: 5px;
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>New Post</h1>
+		</header>
+		<div >
+			<form id="new-post-form">
+
+			<ol>
+				<li>					
+					<label for="txtTitle">Title</label>
+					<input type="text" id="txtTitle" placeholder="Enter post title" autofocus>
+				</li>
+				<li>
+					<label for="txtContent">Content</label>
+					<textarea id="txtContent" rows="5"></textarea>
+				</li>
+				<li>
+					<button type="submit">Create Post</button>
+				</li>
+			</ol>
+
+				
+			</form>
+		</div>
+		<footer>
+			<h3><a href="#">Back</a></h3>
+		</footer>
+	</body>
+</html>
