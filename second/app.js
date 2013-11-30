@@ -2,6 +2,7 @@
 // creating a simple blog engine and also refactoring the helloworld.js file
 
 var http = require('http');
+var url  = require('url');
 
 function renderNewPostForm(request, response){
 
@@ -10,9 +11,23 @@ function renderNewPostForm(request, response){
 
 }
 
+function render404(request,response){
+	response.writeHead(404);
+	response.end('404 File not found error');
+}
+
 var server = http.createServer(function(request, response){
 
-	renderNewPostForm(request,response);
+	var newPostFormRegEx = new RegExp("^/posts/new/?$");
+	var pathName = url.parse( request.url ).pathname;
+
+	if( newPostFormRegEx.test(pathName)){
+		renderNewPostForm(request,response);
+	} else {
+		render404(request, response);
+	}
+
+	
 });
 
 server.listen('8000');
