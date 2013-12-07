@@ -12,8 +12,8 @@ var myAsyncFunction = function( someArg1, someArg2, callback) {
 	console.log ("After setTimeout");
 };
 
-var callback = function() {
+var callback1 = function() {
 	console.log ("I am in callback");
-}
+};
 
-myAsyncFunction("arg1", "arg2", callback);
+myAsyncFunction("arg1", "arg2", callback1);
