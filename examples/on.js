@@ -1,5 +1,6 @@
 /*
     .addListener or .on
+    data and end are two events for ReadStream
 */
 
 //Get the fs module
